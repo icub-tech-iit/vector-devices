@@ -116,6 +116,6 @@ In the Modelling tab, go to Model Settings, then Solver. On Solver Selection, se
 
 ## References
  - [Vector VN1600 Series manual](https://assets.vector.com/cms/content/products/VN16xx/docs/VN1600_Interface_Family_Manual_EN.pdf)
- - [Matlab - use Vector CAN drivers](https://it.mathworks.com/help/sldrt/ug/using-vector-can-drivers.html)
- - [Matlab - Transmit and Receive CAN Messages](https://it.mathworks.com/help/vnt/ug/can-communication-session.html)
- - [Matlab - Build CAN communication Simulink Models](https://it.mathworks.com/help/vnt/ug/build-can-communication-simulink-models.html)
+ - [Matlab - use Vector CAN drivers](https://mathworks.com/help/sldrt/ug/using-vector-can-drivers.html)
+ - [Matlab - Transmit and Receive CAN Messages](https://mathworks.com/help/vnt/ug/can-communication-session.html)
+ - [Matlab - Build CAN communication Simulink Models](https://mathworks.com/help/vnt/ug/build-can-communication-simulink-models.html)
