@@ -17,7 +17,15 @@ The host machine must have the following Mathworks components installed for a mi
 
 ## 2. Vector Driver Installation
 
-The only required installation step involves the VN1610 driver and utilities. Download the official Mathworks support package [here](https://it.mathworks.com/hardware-support/vector.html), by clicking on the button "Get support package". Double click on the package, called `vectorcandevices.mlpkginstall`, to start the installation. The procedure will also start the the third-party driver installer, in which you need to check the box related to VN1600 devices.
+The only required installation step involves the VN1610 driver and utilities. 
+
+#### Matlab R2023a and earlier
+
+Download the official Mathworks support package [here](https://it.mathworks.com/hardware-support/vector.html), by clicking on the button "Get support package". Double click on the package, called `vectorcandevices.mlpkginstall`, to start the installation. The procedure will also start the the third-party driver installer, in which you need to check the box related to VN1600 devices.
+
+#### Matlab R2023a and later
+
+Download the Vector driver installer from the [official website page](https://www.vector.com/it/it/download/vector-driver-setup-23-10-0-for-windows-10-and-11/). Follow the steps, and check the box related to VN1600 devices.
 
 ### 2.1. Testing the Installation
 To verify if the installation was successful, plug the VN1610 to the host machine and type in the MATLAB command window:
