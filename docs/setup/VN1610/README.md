@@ -58,10 +58,10 @@ Now you need to add Matlab to the list of applications:
 1. Flip the switch on the top left to enter "Maintenance" mode.
 2. Click on **Application channels configuration**
 3. Click on the plus sign on the top right to add a new application
-4. On the form that will appear, type in  "MATLAB" and confirm
-5. Click on the button **Add CAN channel**
-6. Add both Channel 1 and Channel 2
-7. Save the new settings.
+   1. On the form that will appear, type in  "MATLAB" and confirm
+4. Click on the button **Add CAN channel**
+5. Add both Channel 1 and Channel 2
+6. Save the new settings.
 
 The VN1610 device should now be configured for MATLAB/Simulink.
 
