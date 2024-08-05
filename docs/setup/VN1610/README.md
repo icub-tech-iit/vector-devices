@@ -25,9 +25,29 @@ Download the official Mathworks support package [here](https://it.mathworks.com/
 
 #### Matlab R2023b and later
 
-Download the Vector driver installer from the [official website page](https://www.vector.com/it/it/download/vector-driver-setup-23-10-0-for-windows-10-and-11/). Follow the steps, and check the box related to VN1600 devices.
+Download the Vector driver installer from the [official website page](https://www.vector.com/int/en/download/vector-driver-setup-for-windows-10-and-11/). Follow the steps, and check the box related to VN1600 devices.
 
-### 2.1. Testing the Installation
+## 3. Device Configuration
+This step is needed by the driver to communicate with applications that Vector sees as third-party (e.g. MATLAB, LabView). 
+
+Plug in your Vector device. On the Start Menu, search for **Vector Hardware Manager** and open it.
+
+You will be presented with the following window:
+
+![](assets/vcanconf.png)
+
+Now you need to add Matlab to the list of applications:
+1. Flip the switch on the top left to enter "Maintenance" mode.
+2. Click on **Application channels configuration**
+3. Click on the plus sign on the top right to add a new application
+4. On the form that will appear, type in  "MATLAB" and confirm
+5. Click on the button **Add CAN channel**
+6. Add both Channel 1 and Channel 2
+7. Save the new settings.
+
+The VN1610 device should now be configured for MATLAB/Simulink.
+
+### 4. Testing the Installation
 To verify if the installation was successful, plug the VN1610 to the host machine and type in the MATLAB command window:
 ```
 canChannelList
@@ -45,30 +65,7 @@ The following table should appear, in which you should see the Vector:
     "Vector"       "Virtual 1"       2        "Virtual"     "CAN, CAN FD"      "100"  
 ```
 
-## 3. Device Configuration
-This step is needed by the driver to communicate with applications that Vector sees as third-party (e.g. MATLAB, LabView). 
-Plug in your Vector device. On the Start Menu, search for **Vector Hardware Config** and open it.
-You will be presented with the following window:
-
-![](assets/vcanconf.png)
-
-Now you need to add Matlab to the list of applications:
-1. Right-click on the entry **Applications** and select **Add application**. On Application Name box, write `MATLAB`
-2. Select **CAN=2**: This selection will create 2 Logical CAN channels
-3. Click on **VN1610 > On board CAN 1051cap(Highspeed)** (the 1st entry, corresponding to the 1st physical channel)
-4. Right-click on **Default baud rate** and set it to the baud rate used by the board (e.g. 1'000'000 Bd for the AMC_BLDC)
-5. Right-click on **On board CAN 1051cap(Highspeed)** (again the 1st entry), select **MATLAB** then **CAN 1**, to map the first physical channel with the first logical channel; If MATLAB does not appear in the menu, it is likely that the mapping is already configured
-6. Repeat the step above for the entry **CAN 2**
-
-The final configuration should match the screenshots below:
-
-![](assets/vcanconf_configured2.png)
-
-![](assets/vcanconf_configured.png)
-
-The VN1610 device should now be configured for MATLAB/Simulink.
-
-## 4. Testing the device in Simulink
+## 4.1. Testing the device in Simulink
 In this section we will build a minimal working example to test the Vector device:
 
 ![](assets/simulink.png)
